@@ -1,15 +1,27 @@
 package br.com.gustavo.globalgames.domain;
 
+import javax.persistence.*;
 import java.util.Calendar;
 
+@Entity
+@Table(name = "tb_locacao")
 public class Locacao {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
+    @Column
     private Calendar dataLocacao;
 
-    private Calendar dataDevolucao;
+    @Column
+    private int dias;
 
+    @Column
     private float valor;
 
     public void setCliente(Cliente cliente) {
@@ -36,11 +48,19 @@ public class Locacao {
         return valor;
     }
 
-    public void setDataDevolucao(Calendar dataDevolucao) {
-        this.dataDevolucao = dataDevolucao;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Calendar getDataDevolucao() {
-        return dataDevolucao;
+    public int getId() {
+        return id;
+    }
+
+    public void setDias(int dias) {
+        this.dias = dias;
+    }
+
+    public int getDias() {
+        return dias;
     }
 }

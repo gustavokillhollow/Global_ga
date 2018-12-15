@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +15,18 @@
 	<form action="">
 		<h3>Locação</h3>
 		<h4>Cliente:</h4>
-		<input type="text">
+		<select>
+			<c:forEach var="cliente" items="${clientes}">
+			<option value="${cliente.id}">${cliente.nome}</option>
+			</c:forEach>
+		</select>
 
 		<h4>Jogo:</h4>
-		<input  type="text">
+		<select>
+			<c:forEach var="jogo" items="${jogos}">
+			<option value="${jogo.id}">${jogo.titulo}</option>
+			</c:forEach>
+		</select>
 
 		<h4>Dias:</h4>
 		<input type="number"><input

@@ -17,10 +17,10 @@ public class Jogo {
 	private String genero;
 
 	@Column
-	private String classIndicativa;
+	private int classIndicativa;
 
 	@Column
-	private String precoDia;
+	private float precoDia;
 
 	public String getTitulo() {
 		return titulo;
@@ -38,20 +38,39 @@ public class Jogo {
 		this.genero = genero;
 	}
 
-	public String getClassIndicativa() {
+	public int getClassIndicativa() {
 		return classIndicativa;
 	}
 
-	public void setClassIndicativa(String classIndicativa) {
+	public void setClassIndicativa(int classIndicativa) {
 		this.classIndicativa = classIndicativa;
 	}
 
-	public String getPrecoDia() {
+	public float getPrecoDia() {
 		return precoDia;
 	}
 
-	public void setPrecoDia(String precoDia) {
+	public void setPrecoDia(float precoDia) {
 		this.precoDia = precoDia;
 	}
 
+	public void setId(int id) {
+
+
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Jogo{" +
+				"id=" + id +
+				", titulo='" + titulo + '\'' +
+				", genero='" + genero + '\'' +
+				", classIndicativa=" + classIndicativa +
+				", precoDia=" + precoDia +
+				'}';
+	}
 }
