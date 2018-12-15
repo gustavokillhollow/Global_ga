@@ -1,0 +1,40 @@
+ <persistência xmlns = "http://java.sun.com/xml/ns/persistence"
+ xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance"
+ xsi: schemaLocation = "http://java.sun.com/xml/ns/persistence
+ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd "
+ versão = "2.0">
+
+ <persistence-unit name = "webservicebd">
+
+ <! - provedor / implementação do JPA ->
+ <provider> org.hibernate.jpa.HibernatePersistenceProvider </ provider>
+
+ <! - entidade mapeada ->
+<class> br.com.pedrodev.webservicecpf.domain.Usuario </ class>
+<class> br.com.pedrodev.webservicecpf.domain.ConsultaTratadaJson </ class>
+ <class> br.com.pedrodev.webservicecpf.domain.ConsultaValores </ class>
+ <classe> br.com.pedrodev.webservicecpf.payment.domain.Pagamento </ class>
+ <classe> br.com.pedrodev.webservicecpf.payment.domain.CreditCard </ class>
+ <class> br.com.pedrodev.webservicecpf.domain.RecuperaSenha </ class>
+ <class> br.com.pedrodev.webservicecpf.domain.TabelaLogAlteracoesSenhas </ class>
+ <class> br.com.pedrodev.webservicecpf.domain.ServicoStatus </ class>
+		
+		
+ <propriedades>
+ <! - dados da conexão ->
+ <nome da propriedade = "javax.persistence.jdbc.driver" value = "com.mysql.jdbc.Driver" />
+ <nome da propriedade = "javax.persistence.jdbc.url" value = "jdbc: mysql: // localhost / webservicecpf? useSSL = falso" />
+ <nome da propriedade = "javax.persistence.jdbc.user" value = "root" />
+ <nome da propriedade = "javax.persistence.jdbc.password" value = "1234" />
+
+ <! - propriedades do hibernate ->
+ <nome da propriedade = "hibernate.dialect" value = "org.hibernate.dialect.MySQL5InnoDBDialect" />
+<nome da propriedade = "hibernate.show_sql" value = "true" />
+ <nome da propriedade = "hibernate.format_sql" value = "true" />
+
+
+ <nome da propriedade = "hibernate.hbm2ddl.auto" value = "update" />
+
+ </ properties>
+ </ persistence-unit>
+ </ persistence>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,19 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="">
+	<form action="">
 		<h3>Locação</h3>
-		<h4>Título:</h4>
-		<input type="text">
-		
-		<h4>Classificação Indicativa:</h4>
-		<input number="text">
-		
-		<h4>Gênero:</h4>
+		<h4>Cliente:</h4>
 		<input type="text">
 
-		<h4>Preço/Dia:</h4>
-		<input number="text"> <input type="submit" value="Salvar">
+		<h4>Jogo:</h4>
+		<input  type="text">
+
+		<h4>Dias:</h4>
+		<input type="number"><input
+			type="submit" value="Salvar">
 	</form>
 </body>
 </html>

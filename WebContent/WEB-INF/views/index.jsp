@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-    tela principal
+   <h1>Global Games</h1>
+  <ul >
+	<Li > <a  href = "http://localhost:8080/Global_Games/cadastrocliente"> Cadastrar Cliente </a > </li >
+	<Li > <a  href = "http://localhost:8080/Global_Games/cadastrojogo"> Cadastrar Jogo </a > </li >
+	<Li > <a  href = "http://localhost:8080/Global_Games/cadastrolocacao"> Nova Locações </a > </li >
+</ul >
 </body>
 </html>

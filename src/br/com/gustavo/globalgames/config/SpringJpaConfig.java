@@ -14,11 +14,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-@Configuration
-@EnableTransactionManagement
+//@Configuration
+//@EnableTransactionManagement
 public class SpringJpaConfig {
 
-    @Bean
+    //@Bean
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
@@ -28,7 +28,7 @@ public class SpringJpaConfig {
         return ds;
     }
 
-    @Bean
+    //@Bean
     public EntityManagerFactory entityManagerFactory(DataSource dataSource) {
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setDataSource(dataSource);
@@ -39,7 +39,7 @@ public class SpringJpaConfig {
         return factory.getObject();
     }
 
-    @Bean
+   // @Bean
     public JpaTransactionManager transactionManager(EntityManagerFactory factory) {
         JpaTransactionManager tx = new JpaTransactionManager();
         tx.setEntityManagerFactory(factory);

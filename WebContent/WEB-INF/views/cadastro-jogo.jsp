@@ -13,13 +13,13 @@
 		<input type="text">
 		
 		<h4>Classificação Indicativa:</h4>
-		<input number="text">
+		<input type="number">
 		
 		<h4>Gênero:</h4>
 		<input type="text">
 
 		<h4>Preço/Dia:</h4>
-		<input number="text"> <input type="submit" value="Salvar">
+		<input type="number"> <input type="submit" value="Salvar">
 	</form>
 </body>
 </html>
