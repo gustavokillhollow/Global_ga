@@ -1,5 +1,6 @@
 package br.com.gustavo.globalgames.model;
 
+import br.com.gustavo.globalgames.config.ConnectionFactory;
 import br.com.gustavo.globalgames.domain.Cliente;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,12 +9,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-@Transactional
+
 @Repository
 public class ClienteDAOImpl implements  ClienteDAO {
 
-    @PersistenceContext
-    EntityManager manager;
+
+    EntityManager manager = ConnectionFactory.getConnection();
 
     @Override
     public void salvar(Cliente cliente) {
