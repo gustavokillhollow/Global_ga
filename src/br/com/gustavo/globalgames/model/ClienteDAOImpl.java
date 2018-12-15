@@ -10,7 +10,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 
-@Repository
+//@Repository
 public class ClienteDAOImpl implements  ClienteDAO {
 
 
@@ -18,7 +18,10 @@ public class ClienteDAOImpl implements  ClienteDAO {
 
     @Override
     public void salvar(Cliente cliente) {
+    	manager.getTransaction().begin();
         manager.persist(cliente);
+        manager.getTransaction().commit();
+        manager.close();
     }
 
     @Override
