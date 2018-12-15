@@ -10,18 +10,17 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 
-//@Repository
+@Transactional
+@Repository
 public class ClienteDAOImpl implements  ClienteDAO {
 
 
-    EntityManager manager = ConnectionFactory.getConnection();
+    @PersistenceContext
+    EntityManager manager ;
 
     @Override
     public void salvar(Cliente cliente) {
-    	manager.getTransaction().begin();
         manager.persist(cliente);
-        manager.getTransaction().commit();
-        manager.close();
     }
 
     @Override
