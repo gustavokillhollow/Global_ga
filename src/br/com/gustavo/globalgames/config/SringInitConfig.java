@@ -12,6 +12,7 @@ public class SringInitConfig extends AbstractAnnotationConfigDispatcherServletIn
 
 	@Override 
 	protected Class<?>[] getServletConfigClasses() {
+
 		
 		return new Class[]{SpringMvcConfig.class};
 	}
@@ -21,5 +22,4 @@ public class SringInitConfig extends AbstractAnnotationConfigDispatcherServletIn
 		
 		return new String[]{"/"};
 	}
-
 }

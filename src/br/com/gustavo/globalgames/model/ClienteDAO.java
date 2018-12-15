@@ -4,21 +4,11 @@ import br.com.gustavo.globalgames.domain.Cliente;
 
 import java.util.List;
 
-public class ClienteDAO implements  ClienteDAOImpl {
+public interface ClienteDAO {
 
+    public void salvar(Cliente cliente);
 
-    @Override
-    public void salvar(Cliente cliente) {
+    public void findCPF(String cpf);
 
-    }
-
-    @Override
-    public void findCPF(String cpf) {
-
-    }
-
-    @Override
-    public List<Cliente> findAll() {
-        return null;
-    }
+    public List<Cliente> findAll();
 }

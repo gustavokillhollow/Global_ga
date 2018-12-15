@@ -1,14 +1,30 @@
 package br.com.gustavo.globalgames.model;
 
 import br.com.gustavo.globalgames.domain.Cliente;
+import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
-public interface ClienteDAOImpl {
+@Repository
+public class ClienteDAOImpl implements  ClienteDAO {
 
-    public void salvar(Cliente cliente);
+    @PersistenceContext
+    EntityManager manager;
 
-    public void findCPF(String cpf);
+    @Override
+    public void salvar(Cliente cliente) {
+        manager.persist(cliente);
+    }
 
-    public List<Cliente> findAll();
+    @Override
+    public void findCPF(String cpf) {
+
+    }
+
+    @Override
+    public List<Cliente> findAll() {
+        return null;
+    }
 }

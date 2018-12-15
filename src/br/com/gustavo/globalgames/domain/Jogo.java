@@ -1,9 +1,25 @@
 package br.com.gustavo.globalgames.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tb_jogo")
 public class Jogo {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column
 	private String titulo;
+
+	@Column
 	private String genero;
+
+	@Column
 	private String classIndicativa;
+
+	@Column
 	private String precoDia;
 
 	public String getTitulo() {
